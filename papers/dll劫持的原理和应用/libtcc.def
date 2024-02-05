@@ -1,0 +1,36 @@
+LIBRARY libtcc.dll
+EXPORTS
+    tcc_add_file=libtcc_origin.tcc_add_file @1
+    tcc_add_include_path=libtcc_origin.tcc_add_include_path @2
+    tcc_add_library=libtcc_origin.tcc_add_library @3
+    tcc_add_library_err=libtcc_origin.tcc_add_library_err @4
+    tcc_add_library_path=libtcc_origin.tcc_add_library_path @5
+    tcc_add_symbol=libtcc_origin.tcc_add_symbol @6
+    tcc_add_sysinclude_path=libtcc_origin.tcc_add_sysinclude_path @7
+    tcc_basename=libtcc_origin.tcc_basename @8
+    tcc_compile_string=libtcc_origin.tcc_compile_string @9
+    tcc_define_symbol=libtcc_origin.tcc_define_symbol @10
+    tcc_delete=libtcc_origin.tcc_delete @11
+    tcc_error=libtcc_origin.tcc_error @12
+    tcc_error_noabort=libtcc_origin.tcc_error_noabort @13
+    tcc_fileextension=libtcc_origin.tcc_fileextension @14
+    tcc_free=libtcc_origin.tcc_free @15
+    tcc_get_dllexports=libtcc_origin.tcc_get_dllexports @16
+    tcc_get_symbol=libtcc_origin.tcc_get_symbol @17
+    tcc_malloc=libtcc_origin.tcc_malloc @18
+    tcc_mallocz=libtcc_origin.tcc_mallocz @19
+    tcc_memcheck=libtcc_origin.tcc_memcheck @20
+    tcc_new=libtcc_origin.tcc_new @21
+    tcc_output_file=libtcc_origin.tcc_output_file @22
+    tcc_parse_args=libtcc_origin.tcc_parse_args @23
+    tcc_print_stats=libtcc_origin.tcc_print_stats @24
+    tcc_realloc=libtcc_origin.tcc_realloc @25
+    tcc_relocate=libtcc_origin.tcc_relocate @26
+    tcc_run=libtcc_origin.tcc_run @27
+    tcc_set_error_func=libtcc_origin.tcc_set_error_func @28
+    tcc_set_lib_path=libtcc_origin.tcc_set_lib_path @29
+    tcc_set_options=libtcc_origin.tcc_set_options @30
+    tcc_set_output_type=libtcc_origin.tcc_set_output_type @31
+    tcc_strdup=libtcc_origin.tcc_strdup @32
+    tcc_undefine_symbol=libtcc_origin.tcc_undefine_symbol @33
+    tcc_warning=libtcc_origin.tcc_warning @34
