@@ -3,7 +3,9 @@
 Time: 2022.12.21  
 Tags: CTF  
 
+
 ### 0x00 前言
+
 最近在 CTF 比赛中遇到一道逆向题目，该题目通过 mov 单指令混淆(https://github.com/xoreaxeaxeax/movfuscator)，可以硬着头皮进行分析，而更好的方式是通过 perf 进行侧信道攻击，通过比较执行的指令数量来爆破 flag。
 
 本文为该题的 writeup；本文测试环境如下：

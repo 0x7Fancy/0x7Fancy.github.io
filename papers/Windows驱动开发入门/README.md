@@ -3,7 +3,9 @@
 Time: 2023.04.18  
 Tags: 开发,Windows  
 
+
 ### 0x00 前言
+
 随着 Windows 系统的更新迭代，Windows 驱动开发技术也是不断的升级：从最早期的 VXD(Virtual X Driver)(已废弃)到 Windows 2000 上推出的 WDM(Windows Driver Model)驱动模型，随后从 Windows vista 推出的 WDF(Windows Driver Foudation)驱动模型，沿用至今；WDF 是 WDM 的升级版，并且在一定程度上兼容，WDF 是微软目前推荐的驱动开发模型。
 
 WDF 还可以细分为内核模式 KMDF(Kernel-Mode Driver Framework) 和用户模式 UMDF(User-Mode Driver Framework)，顾名思义 UMDF 将受到更多的限制从而换来更高的操作系统稳定性，其二进制扩展名为 `*.dll`；UMDF 和 KMDF 开发基本相同，本文这里仅介绍使用更广泛的 KMDF 开发。

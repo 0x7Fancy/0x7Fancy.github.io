@@ -2,9 +2,11 @@
 
 Time: 2019.07.04  
 Tags: 开发  
-PublicFiles: py2pyc.py,Setup.local  
+
+
 
 ### 0x00 前言
+
 在某些情况下，我们可能需要一个即插即用的 Python 环境。
 
 Python 官方提供了 Windows 的可移植版本，eg: `Windows x86-64 embeddable zip file`，也就是带有 `embeddable` 字符串的版本；但没有提供 Linux 环境下的。

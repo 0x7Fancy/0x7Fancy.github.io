@@ -3,7 +3,9 @@
 Time: 2022.11.30  
 Tags: fuzzing  
 
+
 ### 0x00 前言
+
 在上一篇「fuzz入门和afl基本使用」中，我们学习了 fuzz 的原理、掌握了 afl 的基本使用，不过这和 fuzz 漏洞挖掘实战还有很大的距离。本文通过复现 afl-training 的各项练习，学习实战中 afl 常用的使用方法和 fuzz 思想。
 
 afl-training(https://github.com/mykter/afl-training) 是 Michael Macnair 制作的 afl 学习指南，在多次会议中进行演讲分享；可以通过 [PDF](./Fuzzing.with.AFL.-.GrayHat.2020.pdf) 进行学习，也可以按 github 的 README 逐步进行实验学习。

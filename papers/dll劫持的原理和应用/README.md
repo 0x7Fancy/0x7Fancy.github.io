@@ -2,9 +2,11 @@
 
 Time: 2021.09.15  
 Tags: Windows,开发  
-PublicFiles: dllproxy_def_generate.py,libtcc.c,libtcc.def  
+
+
 
 ### 0x00 前言
+
 2020年12月，SolarWinds 攻击事件引发全球的关注(<https://us-cert.cisa.gov/ncas/alerts/aa20-352a>)，攻击团队在 2020年上旬通过对 SolarWinds Orion 产品实现供应链攻击，导致诸多厂商被攻击，造成了不可估量的损失。这种国家间的 APT 攻击包含了大量的技术细节，其中供应链攻击的实现，也就是 SUNBURST 后门植入这一块引起了我极大的兴趣。
 
 2021年1月，网上公开了 SUNBURST 后门植入的分析，后续又有安全研究者对植入细节进一步的优化，根据这些内容我展开了对 dll 劫持的学习和研究。本文对 dll 劫持进行了详细的介绍，并模仿 SUNBURST 后门植入的方法，尝试对 C 编译器实现"供应链攻击"。

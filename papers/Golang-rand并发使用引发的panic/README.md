@@ -2,9 +2,11 @@
 
 Time: 2020.08.10  
 Tags: 开发  
-PublicFiles: rand_panic_demo.go  
+
+
 
 ### 0x00 前言
+
 在项目中遇到 `math/rand` 库所引发的 panic，跟踪发现 `math/rand` 库中部分函数是并发不安全的，由于错误的使用函数而导致的。这里做个简要记录。
 
 参考于 <https://text.baldanders.info/golang/pseudo-random-number-generator/>

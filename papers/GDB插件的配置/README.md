@@ -3,7 +3,9 @@
 Time: 2022.10.25  
 Tags: 逆向分析  
 
+
 ### 0x00 前言
+
 GDB 是 Linux 下最常用的调试工具，但是其默认用户体验很差，在一般情况下我们都会使用插件来增强 GDB 的功能；如下：
 
 * peda https://github.com/longld/peda

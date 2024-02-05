@@ -3,7 +3,9 @@
 Time: 2023.04.19
 Tags: 开发,逆向分析,代码分析  
 
+
 ### 0x00 前言
+
 随着 windows 系统安全不断加强升级，在 windows7 x64 下推出了驱动程序强制签名和 PatchGuard 机制，使得通过 hook 技术实现进程保护的方法不再那么好用了，同时 windows 也推出了 ObRegisterCallbacks 回调函数以便于开发者实现进程保护，这是目前安全软件使用得最广泛的进程保护实现方法。
 
 关于 ObRegisterCallbacks 实现进程保护已经有前辈提供了大量的文章和示例了，本文这里仅做简单的介绍，其本质就是在 `NtOpenProcess` 调用过程中，执行用户设置的回调函数，从而自定义的控制过滤进程权限；本文着重讨论如何卸载 ObRegisterCallbacks 回调函数，从而帮助我们进行日常的安全测试和研究。

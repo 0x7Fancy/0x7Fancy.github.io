@@ -3,7 +3,9 @@
 Time: 2023.05.05  
 Tags: 逆向分析,代码分析,Windows  
 
+
 ### 0x00 前言
+
 Windows 从 vista 版本引入一种进程保护机制(Process Protection)，用于更进一步的控制进程的访问级别，在此之前，用户只需要使用 `SeDebugPrivilege` 令牌权限即可获取任意进程的所有访问权限；随后 Windows8.1 在此进程保护的基础上，扩展引入了进程保护光机制(Protected Process Light)，简称 `PPL` 机制，其能提供更加细粒度化的进程访问权限控制，。
 
 本文将介绍 Windows 的 PPL 安全机制，以及在实验环境下如何绕过该机制，从而实现对 PPL 的进程进行动态调试。

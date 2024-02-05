@@ -3,7 +3,9 @@
 Time: 2022.08.23  
 Tags: 运维  
 
+
 ### 0x00 前言
+
 使用过不少 PC 端的虚拟机软件，比如 MAC 上备受好评的 Parallels Desktop，Windows 上最常用的 Vmware Workstation，以及开源的全平台 VirtualBox，这些软件各自几乎都能覆盖到大多数的应用场景，其提供的 GUI 界面也便于用户操作。
 
 但是这些软件只能运行硬件 CPU 架构对应的虚拟机，当我们在 amd64 平台上想运行 arm 的程序就无能为力了，而 QEMU 的软件模拟可以满足这一需求；除此之外，苹果公司发行 arm 版的 MacBook，想在虚拟机中使用常规的 amd64 的操作系统，也不得不使用 QEMU。

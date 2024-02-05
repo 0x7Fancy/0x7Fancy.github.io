@@ -2,9 +2,11 @@
 
 Time: 2021.04.12  
 Tags: 网络,开发  
-PublicFiles: client.py,nat_check.py,server.py  
+
+
 
 ### 0x00 前言
+
 一直对 P2P 和 NAT 穿透的知识比较感兴趣，正巧最近看到一篇不需要第三方服务器实现 NAT 穿透的项目(<https://github.com/samyk/pwnat>)，经过学习研究后发现这个项目也有很多局限性；借此机会，学习了下 NAT 原理和 UDP 穿透的实现。
 
 本文详细介绍了 NAT 的原理，并以此作为基础介绍了 UDP 穿透的原理和实现。

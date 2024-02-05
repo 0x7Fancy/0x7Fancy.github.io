@@ -3,7 +3,9 @@
 Time: 2023.04.23  
 Tags: fuzzing  
 
+
 ### 0x00 前言
+
 Jackalope 是一款专用于 Windows/macOS 的黑盒 fuzz 开源工具，相比于 WinAFL 他要小众得多；WinAFL 是基于 DynamoRIO 插桩工具实现的，能够处理复杂的插桩需求，而 Jackalope 是基于 TinyInst，是基于调试器原理实现的轻量级动态检测库，Jackalope 更便于用户理解和自定义开发，也有一定的应用场景。
 
 Jackalope 和 WinAFL 实现原理不同，但使用起来基本差不多，了解过 WinAFL 的小伙伴可以很快掌握这个工具；同时 Jackalope/TinyInst/WinAFL 都出自于 `googleprojectzero` 团队。本文主要介绍和演示 Jackalope 的使用。

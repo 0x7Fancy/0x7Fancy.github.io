@@ -3,7 +3,9 @@
 Time: 2022.05.19  
 Tags: 开发,运维  
 
+
 ### 0x00 前言
+
 Gitlab CI/CD 指得是 Gitlab 提供的一套基于 Gitlab 的持续集成、持续交付、持续部署的系统，开发人员可以通过 CI/CD 自动化构建、测试和部署应用。
 
 * 持续集成(Continuous Integration): 对代码变更进行自动化的构建和测试
