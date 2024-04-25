@@ -340,6 +340,7 @@ Grammar-Mutator 内部提供了 4 种特别的变异算法，参考于[NAUTILUS:
 
 `rules_mutation` 的变异次数和规则的复杂度有关系，其他三种变异算法默认值都为 `1000` 次，这是一个良好的值，在实际场景中，过低的变异次数可能无法充分利用指定样本的变异空间，过高的变异次数则又可能穷尽变异空间导致出现大量重复的变异样本数据。
 
+>编写良好的文法能够有效提高运行效率，降低语法解析错误的概率和解析器崩溃的概率；受 Grammar-Mutator 递归解析 AST 的特性影响，但当语法足够复杂时语法解析回溯栈一定会被占满，从而出现崩溃(`segmentation fault`)，这是正常的，通常这个时候 Grammar-Mutator 已经产生了足够的覆盖率。
 
 ### 0x06 References
 https://github.com/AFLplusplus/Grammar-Mutator  

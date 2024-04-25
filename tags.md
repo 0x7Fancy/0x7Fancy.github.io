@@ -24,7 +24,8 @@
     * [busybox添加applet命令](papers/busybox添加applet命令)
     * [安卓开发环境的配置](papers/安卓开发环境的配置)
 
-* **[逆向分析 (9)]**
+* **[逆向分析 (10)]**
+    * [xz-utils后门代码分析](papers/xz-utils后门代码分析)
     * [Windows的PPL安全机制和绕过](papers/Windows的PPL安全机制和绕过)
     * [ObRegisterCallbacks的装载和卸载](papers/ObRegisterCallbacks的装载和卸载)
     * [GDB插件的配置](papers/GDB插件的配置)
@@ -87,6 +88,10 @@
     * [ChatGLM的部署和使用](papers/ChatGLM的部署和使用)
     * [搭建基于llama.cpp的LLaMA模型](papers/搭建基于llama.cpp的LLaMA模型)
 
+* **[恶意软件 (2)]**
+    * [xz-utils后门代码分析](papers/xz-utils后门代码分析)
+    * [Lucky勒索病毒分析与文件解密](papers/Lucky勒索病毒分析与文件解密)
+
 * **[IoT (2)]**
     * [TTL调试TendaAC9-wifi中继](papers/TTL调试TendaAC9-wifi中继)
     * [busybox添加applet命令](papers/busybox添加applet命令)
@@ -101,9 +106,6 @@
 
 * **[渗透 (1)]**
     * [Metasploit的基本使用](papers/Metasploit的基本使用)
-
-* **[恶意软件 (1)]**
-    * [Lucky勒索病毒分析与文件解密](papers/Lucky勒索病毒分析与文件解密)
 
 * **[Linux (1)]**
     * [文件打开模式rwa的区别](papers/文件打开模式rwa的区别)

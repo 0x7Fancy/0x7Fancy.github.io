@@ -4,6 +4,7 @@
 
 ### 2024
 ----------------
+* [2024.04.22 xz-utils后门代码分析](papers/xz-utils后门代码分析)
 * [2024.01.09 afl语法变异插件Grammar-Mutator的基本使用](papers/afl语法变异插件Grammar-Mutator的基本使用)
 
 ### 2023

@@ -138,7 +138,7 @@ Windows10 系统安装完毕后，默认只能识别 GTX750Ti 这张显卡，在
 $ sudo apt-get remove --purge nvidia*
 
 # 安装相关依赖
-$ sudo apt install gcc dkms build-essentail linux-headers-$(uname -r) libglvnd-dev
+$ sudo apt install gcc dkms build-essential linux-headers-$(uname -r) libglvnd-dev
 ```
 
 驱动安装时需要退出 X-Server 图形界面，在 Ubuntu 桌面上执行 `sudo init 3` 退出图形界面；同时使用 `lsmod | grep nouveau` 查看 Ubuntu 默认的显卡驱动，默认情况下是启动的，可以直接使用 `sudo sh NVIDIA-Linux-x86_64-535.54.03.run` 开始安装，其首先会提示并自动写入 `/etc/modprobe.d/blacklist.conf` 配置文件禁用 nouveau 驱动，这里也可以直接手动写入：
