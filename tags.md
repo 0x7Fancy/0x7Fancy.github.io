@@ -2,7 +2,8 @@
 
 ## **Tags**
 
-* **[开发 (20)]**
+* **[开发 (21)]**
+    * [调用ELF文件任意函数的几种方式](papers/调用ELF文件任意函数的几种方式)
     * [TinyInst的插桩实现原理分析](papers/TinyInst的插桩实现原理分析)
     * [fread函数r和rb模式对比](papers/fread函数r和rb模式对比)
     * [ObRegisterCallbacks的装载和卸载](papers/ObRegisterCallbacks的装载和卸载)
@@ -24,7 +25,8 @@
     * [busybox添加applet命令](papers/busybox添加applet命令)
     * [安卓开发环境的配置](papers/安卓开发环境的配置)
 
-* **[逆向分析 (10)]**
+* **[逆向分析 (11)]**
+    * [调用ELF文件任意函数的几种方式](papers/调用ELF文件任意函数的几种方式)
     * [xz-utils后门代码分析](papers/xz-utils后门代码分析)
     * [Windows的PPL安全机制和绕过](papers/Windows的PPL安全机制和绕过)
     * [ObRegisterCallbacks的装载和卸载](papers/ObRegisterCallbacks的装载和卸载)
@@ -110,6 +112,7 @@
 * **[Linux (1)]**
     * [文件打开模式rwa的区别](papers/文件打开模式rwa的区别)
 
-* **[其他 (1)]**
+* **[其他 (2)]**
+    * [基于树莓派DIY制作电子相框](papers/基于树莓派DIY制作电子相框)
     * [StableDiffusion的cpu推理使用](papers/StableDiffusion的cpu推理使用)
 

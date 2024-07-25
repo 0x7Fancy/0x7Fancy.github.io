@@ -21,7 +21,7 @@ WDK 10.0.19041.685
 ### 0x01 搭建驱动开发环境
 首先配置 `Visual Studio 2019` 的 C/C++ 开发环境(https://visualstudio.microsoft.com/)，按 Visual Studio 官方教程，自动下载安装「使用C++的桌面开发」，其中 SDK 默认为 `10.0.19041.0`：
 <div align="center">
-<img src="Images/visualstudio-install.png" width=600>
+<img src="images/visualstudio-install.png" width=600>
 </br>[1.安装VisualStudio]
 </div>
 
@@ -31,13 +31,13 @@ WDK 10.0.19041.685
 >对于 WDM 驱动模型其开发环境叫 DDK(Driver Development Kit)
 
 <div align="center">
-<img src="Images/wdk-install.png" width=600>
+<img src="images/wdk-install.png" width=600>
 </br>[2.安装WDK]
 </div>
 
 安装完毕后，其窗口会默认勾选为 `Visual Studio` 安装 WDK 扩展插件，按照指导进行安装即可，随后我们可以在 `Visual Studio` 的创建项目页面，就看到 KMDF/UMDF 等选项，表示 windows 驱动开发环境配置成功。
 <div align="center">
-<img src="Images/kmdf-in-vs-new-project-panel.png" width=600>
+<img src="images/kmdf-in-vs-new-project-panel.png" width=600>
 </br>[3.vs创建kmdf项目]
 </div>
 
@@ -111,13 +111,13 @@ KmdfHelloWorldEvtDeviceAdd(
 
 在「配置管理器」中设置为 `Debug/x64`，编译生成项目发现如下错误：
 <div align="center">
-<img src="Images/spectre-mitigate-error.png" width=600>
+<img src="images/spectre-mitigate-error.png" width=600>
 </br>[4.spectre缓解设置]
 </div>
 
 `Visual Studio` 默认开启了缓解 Spectre 攻击的机制，可在 VS 安装器中选择安装指定的支持库，我们实验环境下可以直接关闭该功能，在 `项目属性-C/C++-代码生成-Spectre Mitigation` 设置为 `Disable`：
 <div align="center">
-<img src="Images/spectre-mitigate-disabled.png" width=600>
+<img src="images/spectre-mitigate-disabled.png" width=600>
 </br>[5.spectre缓解设置]
 </div>
 
@@ -128,7 +128,7 @@ KmdfHelloWorldEvtDeviceAdd(
 
 按照官方指导，我们将驱动程序作为设备进行运行调试，在此之前需要再提供一台主机作为被调试机(`debugee`)，驱动程序将在被调试机上(`debugee`)进行部署和测试，而本台主机即作为开发主机同时作为调试机(`debugger`)，如下：
 <div align="center">
-<img src="Images/network-kernel-debug.png" width=600>
+<img src="images/network-kernel-debug.png" width=600>
 </br>[6.网络双机调试环境]
 </div>
 
@@ -136,37 +136,37 @@ KmdfHelloWorldEvtDeviceAdd(
 
 在开发主机上(`debugger`)初始化被调试机的相关信息，在 `项目属性-Driver Install-Deployment` 中添加新设备，我们这里使用网络双机调试的方式，默认参数即可：
 <div align="center">
-<img src="Images/add-debuggee-info.png" width=600>
+<img src="images/add-debuggee-info.png" width=600>
 </br>[7.初始化被调试机信息]
 </div>
 
 随后将自动完成配置，如下：
 <div align="center">
-<img src="Images/debugee-wdk-auto-config.png" width=600>
+<img src="images/debugee-wdk-auto-config.png" width=600>
 </br>[8.自动配置双机调试环境]
 </div>
 
 在 `Visual Studio` 中将被调试机(`debugee`)添加完毕后，在如下窗口选择该主机并设置驱动的硬件 ID 为 `Root\KmdfHelloWorld`，如下：
 <div align="center">
-<img src="Images/target-device-configure.png" width=600>
+<img src="images/target-device-configure.png" width=600>
 </br>[9.配置目标设备信息]
 </div>
 
 配置完成后，我们在 `Visual Studio` 菜单中 `生成-部署解决方案`，驱动程序将自动部署在被调试机上(`debugee`)并进行测试运行：
 <div align="center">
-<img src="Images/vs-deploy-driver.png" width=600>
+<img src="images/vs-deploy-driver.png" width=600>
 </br>[10.vs自动部署驱动程序]
 </div>
 
 在被调试机(`debugee`)上我们在设备管理器中可以看到 `KmdfHelloWorld` 已经成功部署了：
 <div align="center">
-<img src="Images/deploy-test-driver.png" width=600>
+<img src="images/deploy-test-driver.png" width=600>
 </br>[11.部署和测试驱动程序]
 </div>
 
 如果想调试驱动程序，则可以使用 WinDBG 依据以上的双机调试环境对驱动程序进行调试。
 <div align="center">
-<img src="Images/windbg-lm-driver.png" width=600>
+<img src="images/windbg-lm-driver.png" width=600>
 </br>[12.windbg查看驱动模块]
 </div>
 
@@ -225,7 +225,7 @@ sc.exe queryex test
 
 创建服务如下：
 <div align="center">
-<img src="Images/sc-create-service.png" width=600>
+<img src="images/sc-create-service.png" width=600>
 </br>[13.sc.exe创建服务]
 </div>
 
@@ -239,7 +239,7 @@ sc.exe stop test
 
 运行如下：
 <div align="center">
-<img src="Images/sc-start-and-stop.png" width=600>
+<img src="images/sc-start-and-stop.png" width=600>
 </br>[14.sc.exe启动和停止服务]
 </div>
 

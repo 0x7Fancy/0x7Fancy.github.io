@@ -50,7 +50,7 @@ lucky 勒索病毒的传播模块并没有做出新的特色，仍使用了以�
 
 **运行截图**  
 <div align="center">
-<img src="Images/Image1.png" width="400">
+<img src="images/image1.png" width="400">
 </div>
 
 
@@ -66,7 +66,7 @@ lucky 勒索病毒的整体结构依然延续 Satan 勒索病毒的结构，包�
 流程图大致如下：
 
 <div align="center">
-<img src="Images/Image2.png" width="500">
+<img src="images/image2.png" width="500">
 </div>
 
 lucky 勒索病毒的每个模块都使用了常见的壳进行加壳保护，比如 `UPX`，`MPRESS`，使用常见的脱壳软件进行自动脱壳即可。
@@ -82,7 +82,7 @@ lucky 勒索病毒的每个模块都使用了常见的壳进行加壳保护，�
 使用 IDA 加载脱壳后的 `cpt.exe.unp`，在主函数中有大量初始化的操作，忽略这些操作，跟入函数可以找到加密逻辑的主函数，下面对这些函数进行标注：
 
 <div align="center">
-<img src="Images/Image3.png" width="400">
+<img src="images/image3.png" width="400">
 </div>
 
 `generate_key`: 生成 60 位随机字符串，用于后续加密文件。  
@@ -97,7 +97,7 @@ lucky 勒索病毒的每个模块都使用了常见的壳进行加壳保护，�
 该函数是加密密钥生成函数，利用随机数从预设的字符串序列中随机选出字符，组成一个长度为 60 字节的密钥。
 
 <div align="center">
-<img src="Images/Image4.png" width="300">
+<img src="images/image4.png" width="300">
 </div>
 
 `byte_56F840` 为预设的字符串序列，其值为：
@@ -108,7 +108,7 @@ lucky 勒索病毒的每个模块都使用了常见的壳进行加壳保护，�
 加密模块中使用该函数为每个用户生成一个标识，用于区分用户；其仍然使用随机数从预设的字符串序列中随机选出字符，最后组成一个长度为 16 字节的 session，并存入到 `C:\\Windows\\Temp\\Ssession` 文件下。
 
 <div align="center">
-<img src="Images/Image5.png" width="400">
+<img src="images/image5.png" width="400">
 </div>
 
 其中 `byte_56F800` 字符串为：
@@ -121,7 +121,7 @@ lucky 勒索病毒的每个模块都使用了常见的壳进行加壳保护，�
 该函数为加密文件的函数入口，提前拼接加密文件的文件名格式，如下：
 
 <div align="center">
-<img src="Images/Image6.png" width="400">
+<img src="images/image6.png" width="400">
 </div>
 
 被加密的文件的文件名格式如下：
@@ -134,7 +134,7 @@ lucky 勒索病毒的每个模块都使用了常见的壳进行加壳保护，�
 在加密前，还会首先向服务器发送 HTTP 消息，通知服务器该用户开始执行加密了：
 
 <div align="center">
-<img src="Images/Image7.png" width="400">
+<img src="images/image7.png" width="400">
 </div>
 
 HTTP 数据包格式如下：
@@ -145,7 +145,7 @@ HTTP 数据包格式如下：
 在加密模块中，lucky 对指定后缀名的文件进行加密：
 
 <div align="center">
-<img src="Images/Image8.png" width="400">
+<img src="images/image8.png" width="400">
 </div>
 
 被加密的后缀名文件包括：
@@ -157,7 +157,7 @@ HTTP 数据包格式如下：
 lucky 使用先前生成的长度为 60 字节的密钥，取前 32 字节作为加密使用，依次读取文件，按照每 16 字节进行 `AEC_ECB` 加密。
 
 <div align="center">
-<img src="Images/Image9.png" width="400">
+<img src="images/image9.png" width="400">
 </div>
 
 除此之外，该勒索病毒对于不同文件大小有不同的处理，结合加密函数的上下文可以得知，这里我们假设文件字节数为 n：
@@ -175,7 +175,7 @@ lucky 使用先前生成的长度为 60 字节的密钥，取前 32 字节作为
 加密前后文件对比：
 
 <div align="center">
-<img src="Images/Image10.png" width="400">
+<img src="images/image10.png" width="400">
 </div>
 
 
@@ -186,7 +186,7 @@ lucky 使用先前生成的长度为 60 字节的密钥，取前 32 字节作为
 
 勒索病毒期待的解密流程：
 <div align="center">
-<img src="Images/Image11.png" width="300">
+<img src="images/image11.png" width="300">
 </div>
 
 **那么，如果能直接找到 AES 密钥呢？**
@@ -194,7 +194,7 @@ lucky 使用先前生成的长度为 60 字节的密钥，取前 32 字节作为
 在完整的分析加密过程后，有些的小伙伴可能已经发现了细节。AES 密钥通过 `generate_key()` 函数生成，再来回顾一下该函数：
 
 <div align="center">
-<img src="Images/Image4.png" width="300">
+<img src="images/image4.png" width="300">
 </div>
 
 利用当前时间戳作为随机数种子，使用随机数从预设的字符串序列中选取字符，组成一个长度为 60 字节的密钥。
@@ -210,7 +210,7 @@ lucky 使用先前生成的长度为 60 字节的密钥，取前 32 字节作为
 还有其他的方式吗？文件被加密后会重新写入文件，所以从操作系统的角度来看，被加密的文件具有一个精确的修改时间，可以利用该时间以确定密钥的生成时间戳：
 
 <div align="center">
-<img src="Images/Image12.png" width="250">
+<img src="images/image12.png" width="250">
 </div>
 
 如果需要加密的文件较多，加密所花的时间较长，那么被加密文件的修改时间就不是生成密钥的时间，应该往前推移，不过这样也大大减少了猜测的范围。
@@ -221,7 +221,7 @@ lucky 使用先前生成的长度为 60 字节的密钥，取前 32 字节作为
 回顾加密过程，可以发现加密过程中，使用时间随机数生成了用户 session，这就成为了一个利用点。利用时间戳产生随机数，并使用随机数生成可能的用户 session，当找到某个 session 和当前被加密的用户 session 相同时，表示该时刻调用了 `generate_session()` 函数，该函数的调用早于文件加密，晚于密钥生成函数。
 
 <div align="center">
-<img src="Images/Image13.jpg" width="350">
+<img src="images/image13.jpg" width="350">
 </div>
 
 找到生成用户session 的时间戳后，再以该时间为起点，往前推移，便可以找到生成密钥的时间戳。

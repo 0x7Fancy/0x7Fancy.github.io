@@ -22,7 +22,7 @@ Busybox 源码
 ```
 
 ### 0x01 Linux编译
-在选择 Linux 源码时，需要选择版本稍微新一些的，因为旧版的源码依赖于旧版的 GDB 编译，这里选择 4.0.1；这个步骤我们使用「x86 linux 虚拟机」进行编译。
+在选择 Linux [源码](https://mirrors.edge.kernel.org/pub/linux/kernel/)时，需要选择版本稍微新一些的，因为旧版的源码依赖于旧版的 GDB 编译，这里选择 4.0.1；这个步骤我们使用「x86 linux 虚拟机」进行编译。
 
 **configuure**  
 执行配置(缺少什么组件就安装)
@@ -50,7 +50,7 @@ Busybox 源码
 
 
 ### 0x02 busybox编译
-busybox 源码选择最新版即可，版本之间影响不大。
+busybox [源码](https://busybox.net/downloads/)选择最新版即可，版本之间影响不大。
 
 **configure**  
 执行配置
@@ -209,6 +209,8 @@ GDB 源码选择 8.2 及以上的版本(本机环境 python3.7，8.2及以上才
 
 
 ### 0x06 References
+<https://www.kernel.org/pub/linux/kernel/>  
+<https://busybox.net/downloads/>  
 <https://blog.csdn.net/jasonLee_lijiaqi/article/details/80967912>  
 <https://www.cnblogs.com/chineseboy/p/4216521.html>  
 <https://bestwing.me/Linux_Kernel_Debugging_with_VMware_and_GDB.html>  

@@ -32,7 +32,7 @@ brew install qemu
 
 安装完成后可以看到以下命令：
 <div align="center">
-<img src="Images/qemu_commands.png" width="500">
+<img src="images/qemu_commands.png" width="500">
 </br>[qemu命令列表]
 </div>
 
@@ -40,7 +40,7 @@ brew install qemu
 
 我们这里直接启动试试 `qemu-system-x86_64`，可以看到如下虚拟机运行界面，由于我们没有配置启动设备，最后提示 `No bootable device`：
 <div align="center">
-<img src="Images/qemu-run-without-configure.png" width="500">
+<img src="images/qemu-run-without-configure.png" width="500">
 </br>[无配置直接运行qemu]
 </div>
 
@@ -55,7 +55,7 @@ qemu-img create -f qcow2 ubuntu16.04_x86.qcow2 10G
 qemu-img info ubuntu16.04_x86.qcow2
 ```
 <div align="center">
-<img src="Images/qemu-img-info.png" width="500">
+<img src="images/qemu-img-info.png" width="500">
 </br>[查看创建的磁盘文件信息]
 </div>
 
@@ -75,7 +75,7 @@ qemu-system-x86_64 -boot c -smp 1 -m 1024 -hda ubuntu16.04_x86.qcow2 -cdrom ubun
 
 和我们使用其他虚拟机软件的配置基本一致，只不过使用参数进行设置了而已，启动后可以看到如下画面：
 <div align="center">
-<img src="Images/ubuntu-install.png" width="500">
+<img src="images/ubuntu-install.png" width="500">
 </br>[ubuntu安装界面]
 </div>
 
@@ -88,7 +88,7 @@ qemu-system-x86_64 -smp 1 -m 1024 -hda ubuntu16.04_x86.qcow2
 
 和上面命令基本一致，取消了光驱设备，默认 `boot` 从硬盘启动。如下：
 <div align="center">
-<img src="Images/ubuntu-launch.png" width="500">
+<img src="images/ubuntu-launch.png" width="500">
 </br>[ubuntu正常启动]
 </div>
 
@@ -151,7 +151,7 @@ qemu-system-x86_64 -vnc 127.0.0.1:0,password -monitor stdio
 
 随后在 QEMU 控制台中设置 VNC 密码，再使用 VNC 客户端连接即可：
 <div align="center">
-<img src="Images/set-vnc-password.png" width="500">
+<img src="images/set-vnc-password.png" width="500">
 </br>[设置VNC密码]
 </div>
 

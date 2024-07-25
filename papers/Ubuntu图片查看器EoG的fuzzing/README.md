@@ -293,13 +293,13 @@ gdk-pixbuf 2.42.10
 
 通过源码调试发现其位于 `eog-image.c#eog_image_real_load()` 下：
 <div align="center">
-<img src="Images/eog_image_real_load_bug_tag.png" width=600>
+<img src="images/eog_image_real_load_bug_tag.png" width=600>
 </br>[15.eog_image_real_load bug触发位置]
 </div>
 
 由 so 库函数 `gdk_pixbuf_loader_write` 触发，其位于 `libgdk_pixbuf-2.0.so.0`：
 <div align="center">
-<img src="Images/ldd_libgdk_pixbuf.png" width=600>
+<img src="images/ldd_libgdk_pixbuf.png" width=600>
 </br>[16.ldd查看eog依赖库]
 </div>
 
@@ -317,7 +317,7 @@ $ set directories gdk-pixbuf-2.42.8/
 
 如下：
 <div align="center">
-<img src="Images/gdk-pixbuf-source-debug.png" width=600>
+<img src="images/gdk-pixbuf-source-debug.png" width=600>
 </br>[17.gdk-pixbuf源码调试]
 </div>
 

@@ -4,6 +4,8 @@
 
 ### 2024
 ----------------
+* [2024.05.22 基于树莓派DIY制作电子相框](papers/基于树莓派DIY制作电子相框)
+* [2024.05.07 调用ELF文件任意函数的几种方式](papers/调用ELF文件任意函数的几种方式)
 * [2024.04.22 xz-utils后门代码分析](papers/xz-utils后门代码分析)
 * [2024.01.09 afl语法变异插件Grammar-Mutator的基本使用](papers/afl语法变异插件Grammar-Mutator的基本使用)
 
