@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach>
+
+    <DataModel name="TheDataModel">
+        <Blob />
+    </DataModel>
+    
+    <StateModel name="TheState" initialState="Initial">
+        <State name="Initial" >
+            <Action type="output" >
+                <DataModel ref="TheDataModel" />
+                <Data name="data" fileName="samples_png/*.png" />
+            </Action>
+
+            <Action type="close" />
+
+            <Action type="call" method="LaunchViewer" publisher="Peach.Agent" />
+        </State>
+    </StateModel>
+
+    <Agent name="TheAgent">
+        <Monitor class="LinuxDebugger">
+            <Param name="Executable" value="feh" />
+            <Param name="Arguments" value="fuzzed.png" />
+        </Monitor>
+    </Agent>
+
+    <Test name="Default">
+        <StateModel ref="TheState"/>
+
+        <Publisher class="File">
+            <Param name="FileName" value="fuzzed.png" />
+        </Publisher>
+
+        <Agent ref="TheAgent" />
+
+        <Logger class="Filesystem">
+            <Param name="Path" value="logs" />
+        </Logger>
+    </Test>
+
+</Peach>

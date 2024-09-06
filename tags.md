@@ -38,7 +38,8 @@
     * [安卓逆向基础入门](papers/安卓逆向基础入门)
     * [Lucky勒索病毒分析与文件解密](papers/Lucky勒索病毒分析与文件解密)
 
-* **[fuzzing (8)]**
+* **[fuzzing (9)]**
+    * [使用Peach进行基于变异和生成的fuzzing](papers/使用Peach进行基于变异和生成的fuzzing)
     * [afl语法变异插件Grammar-Mutator的基本使用](papers/afl语法变异插件Grammar-Mutator的基本使用)
     * [TinyInst的插桩实现原理分析](papers/TinyInst的插桩实现原理分析)
     * [Ubuntu图片查看器EoG的fuzzing](papers/Ubuntu图片查看器EoG的fuzzing)

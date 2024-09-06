@@ -1,0 +1,22 @@
+diff --git a/a.cs b/Peach.Core/Engine.cs
+index 9c5af05..47a5093 100644
+--- a/a.cs
++++ b/Peach.Core/Engine.cs
+@@ -401,6 +401,8 @@ namespace Peach.Core
+ 							if (IterationStarting != null)
+ 								IterationStarting(context, iterationCount, iterationTotal.HasValue ? iterationStop : iterationTotal);
+ 
++							test.stateModel.Run(context);
++
+ 							if (context.controlIteration)
+ 							{
+ 								if (context.controlRecordingIteration)
+@@ -410,8 +412,6 @@ namespace Peach.Core
+ 							}
+ 
+ 							context.agentManager.IterationStarting(iterationCount, context.reproducingFault);
+-
+-							test.stateModel.Run(context);
+ 						}
+ 						catch (SoftException se)
+ 						{

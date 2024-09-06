@@ -1,0 +1,26 @@
+diff --git a/a.cs b/./Peach.Core.OS.Linux/Agent/Monitors/LinuxDebugger.cs
+index ef68bfa..f74be4e 100644
+--- a/a.cs
++++ b/./Peach.Core.OS.Linux/Agent/Monitors/LinuxDebugger.cs
+@@ -20,7 +20,7 @@ namespace Peach.Core.OS.Linux.Agent.Monitors
+ 	[Monitor("LinuxDebugger", true)]
+ 	[Parameter("Executable", typeof(string), "Executable to launch")]
+ 	[Parameter("Arguments", typeof(string), "Optional command line arguments", "")]
+-	[Parameter("GdbPath", typeof(string), "Path to gdb", "/usr/bin/gdb")]
++	[Parameter("GdbPath", typeof(string), "Path to gdb", "/home/ubuntu/peach/install/bin/gdb")]
+ 	[Parameter("RestartOnEachTest", typeof(bool), "Restart process for each interation", "false")]
+ 	[Parameter("FaultOnEarlyExit", typeof(bool), "Trigger fault if process exists", "false")]
+ 	[Parameter("NoCpuKill", typeof(bool), "Disable process killing when CPU usage nears zero", "false")]
+@@ -38,9 +38,10 @@ define log_if_crash
+   source {3}
+   set logging overwrite on
+   set logging redirect on
+-  set logging on {0}
++  set logging file {0}
++  set logging enabled on
+   exploitable -v
+-  set logging off
++  set logging enabled off
+  end
+ end
+ 

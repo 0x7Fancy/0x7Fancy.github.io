@@ -269,7 +269,7 @@ sc.exe start remove_ppl
 * https://github.com/Mattiwatti/PPLKiller  
 * https://github.com/itm4n/PPLcontrol  
 
-### 0x0x References
+### 0x05 References
 https://learn.microsoft.com/en-us/windows/win32/services/protecting-anti-malware-services-  
 https://learn.microsoft.com/en-us/windows/win32/procthread/zwqueryinformationprocess  
 https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights  

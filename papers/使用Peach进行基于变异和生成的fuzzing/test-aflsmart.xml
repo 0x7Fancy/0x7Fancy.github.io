@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Peach>
+
+    <DataModel name="TheDataModel">
+        <Number name="header" size="16" />
+        <Number name="length" size="32" />
+        <Number name="chunk1" size="16" />
+        <Number name="chunk2" size="32" />
+        <String value="1234"></String>
+    </DataModel>
+    
+    <StateModel name="TheState" initialState="Initial">
+        <State name="Initial" >
+            <Action type="output" >
+                <DataModel ref="TheDataModel" />
+            </Action>
+
+            <Action type="close" />
+        </State>
+    </StateModel>
+
+    <Test name="Default">
+        <StateModel ref="TheState"/>
+
+        <Publisher class="File">
+            <Param name="FileName" value="repaired" />
+        </Publisher>
+
+        <Logger class="Filesystem">
+            <Param name="Path" value="logs" />
+        </Logger>
+    </Test>
+
+</Peach>
