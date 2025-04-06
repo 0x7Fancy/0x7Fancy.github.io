@@ -25,7 +25,8 @@
     * [busybox添加applet命令](papers/busybox添加applet命令)
     * [安卓开发环境的配置](papers/安卓开发环境的配置)
 
-* **[逆向分析 (11)]**
+* **[逆向分析 (12)]**
+    * [通过QEMU模拟运行ARM程序](papers/通过QEMU模拟运行ARM程序)
     * [调用ELF文件任意函数的几种方式](papers/调用ELF文件任意函数的几种方式)
     * [xz-utils后门代码分析](papers/xz-utils后门代码分析)
     * [Windows的PPL安全机制和绕过](papers/Windows的PPL安全机制和绕过)
@@ -58,6 +59,14 @@
     * [Gitlab-CICD配置以及自签证书的问题](papers/Gitlab-CICD配置以及自签证书的问题)
     * [ProxmoxVE下的windows内核调试环境配置](papers/ProxmoxVE下的windows内核调试环境配置)
 
+* **[LLM (6)]**
+    * [机器学习的逻辑回归模型](papers/机器学习的逻辑回归模型)
+    * [机器学习的线性回归模型](papers/机器学习的线性回归模型)
+    * [LLM检索增强生成(RAG)的基本原理和实现](papers/LLM检索增强生成(RAG)的基本原理和实现)
+    * [折腾P40显卡本地运行LLM的环境](papers/折腾P40显卡本地运行LLM的环境)
+    * [ChatGLM的部署和使用](papers/ChatGLM的部署和使用)
+    * [搭建基于llama.cpp的LLaMA模型](papers/搭建基于llama.cpp的LLaMA模型)
+
 * **[代码分析 (5)]**
     * [TinyInst的插桩实现原理分析](papers/TinyInst的插桩实现原理分析)
     * [Windows的PPL安全机制和绕过](papers/Windows的PPL安全机制和绕过)
@@ -86,10 +95,9 @@
     * [Windows驱动开发入门](papers/Windows驱动开发入门)
     * [dll劫持的原理和应用](papers/dll劫持的原理和应用)
 
-* **[LLM (3)]**
-    * [折腾P40显卡本地运行LLM的环境](papers/折腾P40显卡本地运行LLM的环境)
-    * [ChatGLM的部署和使用](papers/ChatGLM的部署和使用)
-    * [搭建基于llama.cpp的LLaMA模型](papers/搭建基于llama.cpp的LLaMA模型)
+* **[机器学习 (2)]**
+    * [机器学习的逻辑回归模型](papers/机器学习的逻辑回归模型)
+    * [机器学习的线性回归模型](papers/机器学习的线性回归模型)
 
 * **[恶意软件 (2)]**
     * [xz-utils后门代码分析](papers/xz-utils后门代码分析)
@@ -109,6 +117,9 @@
 
 * **[渗透 (1)]**
     * [Metasploit的基本使用](papers/Metasploit的基本使用)
+
+* **[代码审计 (1)]**
+    * [CodeQL入门和基本使用](papers/CodeQL入门和基本使用)
 
 * **[Linux (1)]**
     * [文件打开模式rwa的区别](papers/文件打开模式rwa的区别)

@@ -278,7 +278,7 @@ $ /C/Users/john/Desktop/DynamoRIO-Windows-8.0.0-1/bin64/drrun.exe -c winafl.dll 
 $ /C/Users/john/Desktop/DynamoRIO-Windows-8.0.0-1/bin64/drrun.exe -t drcov -- test.exe in/seed
 ```
 
-使用 IDA 加载 `test.exe`，并用插件 `Lighthouse` 打开覆盖率文件，可以评估覆盖率评估：
+使用 IDA 加载 `test.exe`，并用插件 `Lighthouse` 打开覆盖率文件，可以进行覆盖率评估：
 <div align="center">
 <img src="images/test-coverage-testing.png" width=500>
 </br>[9.test.exe覆盖率测试]

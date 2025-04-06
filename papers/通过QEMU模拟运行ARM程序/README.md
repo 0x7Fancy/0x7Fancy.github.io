@@ -1,7 +1,7 @@
 ## 通过QEMU模拟运行ARM程序
 
-0x7F@knownsec404  
 Time: 2024.08.07  
+Tags: 逆向分析  
 
 
 ### 0x00 前言
@@ -107,6 +107,8 @@ $ qemu-aarch64 -L mnt/ ld-arm.so --list ./ls-arm
 <img src="images/qemu-prefix-execute-ls.png" width=700>
 </br>[5.指定QEMU_LD_PREFIX运行ls-arm程序]
 </div>
+
+>在宿主机环境下使用该进场模拟的方式执行目标程序，通常建议在 docker 中进行，因为目标程序运行时可能会写入文件从而导致污染宿主机环境。
 
 在实际情况下，目标二进制程序所依赖的组件可能比较复杂，我们还可以使用 `chroot` 命令以更完整复用挂载的文件系统(`mnt`)，由于 `chroot` 修改根目录后会影响 `qemu-aarch64` 程序的依赖库，所以我们需要使用 `qemu-aarch64-static` 程序：
 ```
@@ -345,6 +347,7 @@ https://cdimage.ubuntu.com/releases/20.04/release/
 https://github.com/0x7Fancy/0x7Fancy.github.io/blob/main/papers/QEMU%E8%99%9A%E6%8B%9F%E5%8C%96%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8  
 https://gitlab.com/giomasce/dqib  
 https://people.debian.org/~gio/dqib/  
+https://people.debian.org/~aurel32/qemu/  
 https://paper.seebug.org/480/  
 https://ubuntu.com/server/docs/boot-arm64-virtual-machines-on-qemu  
 https://unix.stackexchange.com/questions/399619/why-do-embedded-systems-need-device-tree-while-pcs-dont  
